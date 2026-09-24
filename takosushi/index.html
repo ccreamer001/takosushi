@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TakoSushi Spartanburg | Far East Southwest Fusion</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            takoCrimson: '#be123c',
+            takoAmber: '#f59e0b',
+            takoChile: '#15803d',
+            takoDark: '#0f0f11',
+            takoCard: '#18181b',
+            takoBorder: '#27272a'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth tab transition */
+    .tab-content { display: none; }
+    .tab-content.active { display: grid; }
+  </style>
+</head>
+<body class="bg-takoDark text-zinc-100 font-sans antialiased selection:bg-rose-700 selection:text-white">
+
+  <!-- Top Announcement Bar: Lunch Specials -->
+  <div class="bg-gradient-to-r from-rose-900 via-amber-700 to-rose-900 text-white text-xs py-2 px-4 text-center font-bold tracking-wide border-b border-rose-800">
+    🍱 WEEKDAY LUNCH SPECIALS • MON–FRI 11 AM – 2 PM • INCLUDES FOUNTAIN DRINK, TEA OR LEMONADE
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="sticky top-0 z-50 bg-[#121215]/95 backdrop-blur border-b border-takoBorder">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      
+      <!-- Brand & Yin-Yang Identity -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full border-2 border-rose-600 flex items-center justify-center font-black text-rose-500 text-lg bg-zinc-900 shadow-inner">
+          ☯
+        </div>
+        <div>
+          <span class="text-2xl font-black tracking-tight text-white">TAKO<span class="text-rose-600">SUSHI</span></span>
+          <span class="block text-[10px] tracking-widest text-amber-500 uppercase font-semibold">Far East • Southwest</span>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-zinc-300">
+        <a href="#lunch" class="hover:text-amber-400 transition">Lunch Specials</a>
+        <a href="#menu" class="hover:text-rose-400 transition">Dinner & Rolls</a>
+        <a href="#specials" class="hover:text-amber-400 transition">Hub City Features</a>
+        <a href="#kids" class="hover:text-rose-400 transition">Kids Menu</a>
+        <a href="#info" class="hover:text-zinc-100 transition">Hours & Location</a>
+      </nav>
+
+      <!-- Action Button -->
+      <a href="tel:8645852337" class="bg-rose-600 hover:bg-rose-500 text-white font-bold px-4 py-2 rounded-lg text-sm transition shadow-lg shadow-rose-950">
+        Call for Carryout
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 px-4 text-center border-b border-takoBorder bg-gradient-to-b from-[#1c1917] via-takoDark to-takoDark">
+    <div class="max-w-3xl mx-auto space-y-5">
+      <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+        <span>🍣 Fresh Sashimi</span> • <span>🌶️ Hatch Green Chiles</span> • <span>🌮 Street Takos</span>
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight">
+        Far East Craft. <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-amber-400 to-rose-400">
+          Southwest Fire.
+        </span>
+      </h1>
+      <p class="text-zinc-300 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+        Why choose between prime tuna tataki and slow-braised pork carnitas? At 226 W Main, we bring Japanese precision and bold Southwestern comfort together under one roof.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-3">
+        <a href="#lunch" class="bg-amber-500 hover:bg-amber-400 text-zinc-950 font-black px-6 py-3 rounded-lg shadow-lg shadow-amber-500/20 transition">
+          View Lunch Specials ($11.99+)
+        </a>
+        <a href="#menu" class="bg-zinc-800 hover:bg-zinc-700 text-white font-bold px-6 py-3 rounded-lg border border-zinc-700 transition">
+          Browse Full Menu
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LUNCH SPECIALS SPOTLIGHT (Direct from Menu) -->
+  <section id="lunch" class="py-16 px-4 max-w-6xl mx-auto border-b border-takoBorder">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-xs uppercase tracking-widest text-amber-500 font-extrabold">Monday – Friday | 11:00 AM – 2:00 PM</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Downtown Spartanburg Lunch Express</h2>
+      <p class="text-zinc-400 text-sm mt-2">All lunch specials come with fountain drink, iced tea, or fresh lemonade.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      
+      <!-- Lunch Item 1: Tako Plate -->
+      <div class="bg-takoCard border border-takoBorder rounded-2xl p-6 relative flex flex-col justify-between hover:border-amber-500/40 transition">
+        <div>
+          <div class="flex justify-between items-baseline mb-2">
+            <h3 class="text-xl font-black text-white">Tako Plate</h3>
+            <span class="text-amber-400 font-mono font-bold text-lg">$11.99</span>
+          </div>
+          <p class="text-xs text-amber-500 font-bold uppercase mb-3">Choice of 2 Takos with Rice & Beans</p>
+          
+          <div class="text-xs text-zinc-300 space-y-2 mb-4">
+            <p><strong>From the Sea:</strong> Baja Fish (grilled/fried), Firecracker Shrimp, Baja Shrimp, or Fried Calamari. Sauced with cabbage, onion, cilantro, queso fresco, salsa & sour cream.</p>
+            <p><strong>From the Land:</strong> Pork Belly, Chicken, Carnitas, Chorizo, or Steak (+$3).</p>
+          </div>
+        </div>
+        <span class="text-[11px] text-zinc-500 italic">Includes side lime & homemade salsa</span>
+      </div>
+
+      <!-- Lunch Item 2: Tako + Roll Combo -->
+      <div class="bg-gradient-to-b from-rose-950/40 to-takoCard border-2 border-rose-500/40 rounded-2xl p-6 relative flex flex-col justify-between shadow-xl">
+        <span class="absolute -top-3 right-4 bg-rose-600 text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full">Most Popular</span>
+        <div>
+          <div class="flex justify-between items-baseline mb-2">
+            <h3 class="text-xl font-black text-white">Tako + Roll Combo</h3>
+            <span class="text-rose-400 font-mono font-bold text-lg">$12.99</span>
+          </div>
+          <p class="text-xs text-rose-300 font-bold uppercase mb-3">Choose Any 1 Tako + 1 Roll Below</p>
+          <p class="text-xs text-zinc-300 mb-3">Served with a fresh house side salad.</p>
+          <div class="bg-zinc-900/80 p-3 rounded-lg border border-zinc-800 text-xs text-zinc-200">
+            <span class="font-bold text-amber-400 block mb-1">Pick Your Roll:</span>
+            California Roll • Spicy Tuna Roll* • Yasai Roll • Shrimp Tempura Roll
+          </div>
+        </div>
+        <span class="text-[11px] text-zinc-400 mt-4 italic">*Spicy tuna contains sesame oil & seeds</span>
+      </div>
+
+      <!-- Lunch Item 3: Bowls & Wraps -->
+      <div class="bg-takoCard border border-takoBorder rounded-2xl p-6 relative flex flex-col justify-between hover:border-amber-500/40 transition">
+        <div>
+          <div class="flex justify-between items-baseline mb-2">
+            <h3 class="text-xl font-black text-white">Bowls / Wraps / Salads</h3>
+            <span class="text-amber-400 font-mono font-bold text-lg">$14.99</span>
+          </div>
+          <p class="text-xs text-amber-500 font-bold uppercase mb-3">Asian or Southwest Style</p>
+          <div class="text-xs text-zinc-300 space-y-2 mb-4">
+            <p><strong>Asian:</strong> Lettuce over rice with cucumber, edamame, carrots, wonton strips, nori goma, teriyaki, Takosushi sauce & chili garlic crunch.</p>
+            <p><strong>Southwest:</strong> Lettuce over rice with black beans, corn, pico, tortilla strips, queso fresco, onion, cilantro.</p>
+          </div>
+        </div>
+        <div class="text-[11px] text-zinc-400 border-t border-zinc-800 pt-2">
+          <strong>Proteins:</strong> Chicken, Carnitas, Chorizo, Steak (+$3), Shrimp (+$3), Calamari (+$3), Salmon* (+$3), Tuna* (+$3)
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Burger & Chicken Sandwich Row -->
+    <div class="grid md:grid-cols-2 gap-6 mt-6">
+      <div class="bg-zinc-900 border border-zinc-800 p-5 rounded-xl flex justify-between items-center">
+        <div>
+          <h4 class="font-bold text-white text-base">Takosushi Burger</h4>
+          <p class="text-xs text-zinc-400 max-w-md">1/2 lb burger, roasted green chiles, green tomato jalapeño relish, cilantro mayo, chipotle lime ketchup, dijon mustard, served with fries.</p>
+          <span class="text-[10px] text-amber-400">Add egg +$1 | Add crispy pork belly +$2</span>
+        </div>
+        <span class="font-mono text-base font-bold text-rose-400 ml-4">$14.99</span>
+      </div>
+
+      <div class="bg-zinc-900 border border-zinc-800 p-5 rounded-xl flex justify-between items-center">
+        <div>
+          <h4 class="font-bold text-white text-base">Takosushi Chicken Sandwich</h4>
+          <p class="text-xs text-zinc-400 max-w-md">Grilled or fried — shredded lettuce, pickled cucumbers, carrots, onion cilantro, choice of chipotle aioli or cilantro mayo, with fries.</p>
+          <span class="text-[10px] text-amber-400">Add avocado +$2</span>
+        </div>
+        <span class="font-mono text-base font-bold text-rose-400 ml-4">$13.99</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUSHI SPECIALS: SPARTANBURG PRIDE (RJ Rockers Roll & Hub City Roll) -->
+  <section id="specials" class="py-16 px-4 bg-gradient-to-r from-zinc-950 via-[#141418] to-zinc-950 border-b border-takoBorder">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase tracking-widest text-rose-500 font-extrabold">House Signatures</span>
+        <h2 class="text-3xl font-black text-white mt-1">Spartanburg Sushi Specials</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <!-- RJ Rockers Roll -->
+        <div class="bg-zinc-900 border-2 border-amber-500/50 rounded-2xl p-6 relative">
+          <span class="bg-amber-500 text-stone-950 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wider">Brewery Neighbor</span>
+          <div class="flex justify-between items-baseline my-2">
+            <h3 class="text-xl font-black text-amber-400">RJ Rockers Roll</h3>
+            <span class="text-amber-400 font-mono font-black text-lg">$18.88</span>
+          </div>
+          <p class="text-xs text-zinc-400 mb-3"><strong>Inside:</strong> Spicy tuna, avocado, asparagus, cucumber.</p>
+          <p class="text-xs text-zinc-200"><strong>Topped with:</strong> Seared tuna, thin-sliced lemon, green onion, and savory smoked ponzu.</p>
+        </div>
+
+        <!-- Hub City Roll -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 relative hover:border-rose-500/50 transition">
+          <span class="bg-rose-600/30 text-rose-300 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wider">Sparkle City Classic</span>
+          <div class="flex justify-between items-baseline my-2">
+            <h3 class="text-xl font-black text-rose-400">Hub City Roll</h3>
+            <span class="text-rose-400 font-mono font-black text-lg">$15.50</span>
+          </div>
+          <p class="text-xs text-zinc-400 mb-3"><strong>Inside:</strong> Tuna, crab, cream cheese, avocado, mango.</p>
+          <p class="text-xs text-zinc-200">Flash-fried and topped with house firecracker sauce, teriyaki glaze, masago, and green onion.</p>
+        </div>
+
+        <!-- Dragon Roll -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 relative hover:border-rose-500/50 transition">
+          <span class="bg-zinc-800 text-zinc-400 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wider">Fan Favorite</span>
+          <div class="flex justify-between items-baseline my-2">
+            <h3 class="text-xl font-black text-white">Dragon Roll</h3>
+            <span class="text-zinc-200 font-mono font-black text-lg">$19.00</span>
+          </div>
+          <p class="text-xs text-zinc-400 mb-3"><strong>Inside:</strong> Spicy tuna and crispy fried shrimp.</p>
+          <p class="text-xs text-zinc-200"><strong>Topped with:</strong> Eel (unagi), fresh avocado, unagi glaze, and fresh strawberry slices.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DINNER MENU TABS (East vs West) -->
+  <section id="menu" class="py-16 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="text-xs uppercase tracking-widest text-zinc-400 font-extrabold">Complete Dinner Selection</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Explore the Full Kitchen</h2>
+      
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-2 mt-6">
+        <button onclick="setTab('starters-west')" id="btn-starters-west" class="tab-btn px-4 py-2 rounded-lg text-xs font-bold bg-amber-600 text-white transition">West Starters (Southwest)</button>
+        <button onclick="setTab('starters-east')" id="btn-starters-east" class="tab-btn px-4 py-2 rounded-lg text-xs font-bold bg-zinc-800 text-zinc-300 hover:bg-zinc-700 transition">East Starters (Asian)</button>
+        <button onclick="setTab('makimono')" id="btn-makimono" class="tab-btn px-4 py-2 rounded-lg text-xs font-bold bg-zinc-800 text-zinc-300 hover:bg-zinc-700 transition">Makimono Specialty Rolls</button>
+        <button onclick="setTab('southwest-entrees')" id="btn-southwest-entrees" class="tab-btn px-4 py-2 rounded-lg text-xs font-bold bg-zinc-800 text-zinc-300 hover:bg-zinc-700 transition">Southwest Entrées & Takos</button>
+      </div>
+    </div>
+
+    <!-- TAB 1: WEST STARTERS -->
+    <div id="panel-starters-west" class="tab-content active grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Green Chile Queso Dip</h4>
+          <span class="text-amber-400 font-mono font-bold">$10</span>
+        </div>
+        <p class="text-xs text-zinc-400">Warm house queso dip blended with New Mexico fire-roasted green chiles, served with crisp tortilla chips.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Fresh Guacamole</h4>
+          <span class="text-amber-400 font-mono font-bold">$11</span>
+        </div>
+        <p class="text-xs text-zinc-400">Fresh mashed avocados, lime juice, cilantro, tomatoes, and red onion. Served with fresh tortilla chips.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Stuffed Jalapeños</h4>
+          <span class="text-amber-400 font-mono font-bold">$12</span>
+        </div>
+        <p class="text-xs text-zinc-400">Fresh jalapeños stuffed with seasoned cheeses, flash-fried crisp, served with our cooling house dipping sauce.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Southwest Tuna Tartare*</h4>
+          <span class="text-rose-400 font-mono font-bold">$16</span>
+        </div>
+        <p class="text-xs text-zinc-400">Diced ahi tuna, fresh avocado, wasabi drizzle, sriracha, lime juice, and cilantro, served with homemade crisp chips.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Smoked Salmon Feta Quesadilla</h4>
+          <span class="text-amber-400 font-mono font-bold">$15</span>
+        </div>
+        <p class="text-xs text-zinc-400">Warm flour tortilla folded with house-smoked salmon, crumbled feta cheese, and Jack cheese. Add portabella +$1.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Chicken Taquitos (4)</h4>
+          <span class="text-amber-400 font-mono font-bold">$11</span>
+        </div>
+        <p class="text-xs text-zinc-400">Crispy rolled corn taquitos stuffed with seasoned chicken, served with salsa, sour cream, and house guacamole.</p>
+      </div>
+    </div>
+
+    <!-- TAB 2: EAST STARTERS -->
+    <div id="panel-starters-east" class="tab-content grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Pork Potstickers (Gyoza)</h4>
+          <span class="text-rose-400 font-mono font-bold">$9.50</span>
+        </div>
+        <p class="text-xs text-zinc-400">Pan-seared traditional pork dumplings served with our savory soy-ginger dipping sauce and scallions.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Shrimp Shumai</h4>
+          <span class="text-rose-400 font-mono font-bold">$9.50</span>
+        </div>
+        <p class="text-xs text-zinc-400">Steamed or fried Japanese open-faced shrimp dumplings with house ponzu sauce.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Crispy Fried Calamari</h4>
+          <span class="text-rose-400 font-mono font-bold">$13</span>
+        </div>
+        <p class="text-xs text-zinc-400">Tender calamari rings flash-fried crisp, served with sweet chili sauce and Takosushi drizzle.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Tuna Tataki*</h4>
+          <span class="text-rose-400 font-mono font-bold">$15</span>
+        </div>
+        <p class="text-xs text-zinc-400">Seared sesame ahi tuna thinly sliced over cucumber salad with house ponzu and scallions.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Tuna Carpaccio*</h4>
+          <span class="text-rose-400 font-mono font-bold">$16</span>
+        </div>
+        <p class="text-xs text-zinc-400">Yellowfin tuna carpaccio with fresh jalapeno slices, micro greens, and citrus yuzu dressing.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Edamame</h4>
+          <span class="text-rose-400 font-mono font-bold">$6.50</span>
+        </div>
+        <p class="text-xs text-zinc-400">Steamed soybeans tossed in coarse sea salt. (Spicy chili-garlic option available upon request).</p>
+      </div>
+    </div>
+
+    <!-- TAB 3: MAKIMONO SPECIALTY ROLLS -->
+    <div id="panel-makimono" class="tab-content grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Firecracker Roll*</h4>
+          <span class="text-rose-400 font-mono font-bold">$15</span>
+        </div>
+        <p class="text-xs text-zinc-400">Shrimp tempura, cream cheese, avocado, topped with spicy tuna, tempura crunch, unagi sauce, and masago.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Greenville Roll*</h4>
+          <span class="text-rose-400 font-mono font-bold">$16</span>
+        </div>
+        <p class="text-xs text-zinc-400">Crispy soft shell crab, cucumber, cream cheese, topped with fresh salmon, avocado, and unagi drizzle.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Triple Tango Roll*</h4>
+          <span class="text-rose-400 font-mono font-bold">$16.50</span>
+        </div>
+        <p class="text-xs text-zinc-400">Tuna, salmon, yellowtail, avocado, wrapped in soy paper, topped with spicy crab salad and tobiko.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Volcano Roll*</h4>
+          <span class="text-rose-400 font-mono font-bold">$16</span>
+        </div>
+        <p class="text-xs text-zinc-400">California roll baked with a rich topping of chopped scallops, crab, shrimp, spicy mayo, and sweet eel sauce.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Rainbow Roll*</h4>
+          <span class="text-rose-400 font-mono font-bold">$15.50</span>
+        </div>
+        <p class="text-xs text-zinc-400">Crab and cucumber roll draped with chef’s choice of tuna, salmon, yellowtail, and ripe avocado.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Bento Box (Chef Choice)</h4>
+          <span class="text-rose-400 font-mono font-bold">$39.50</span>
+        </div>
+        <p class="text-xs text-zinc-400">The ultimate sushi sampler for 1 or 2: Nigiri, sashimi cuts, chef specialty maki, miso soup, and sunomono salad.</p>
+      </div>
+    </div>
+
+    <!-- TAB 4: SOUTHWEST ENTRÉES & TAKOS -->
+    <div id="panel-southwest-entrees" class="tab-content grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">3 Takos Dinner Platter</h4>
+          <span class="text-amber-400 font-mono font-bold">$17</span>
+        </div>
+        <p class="text-xs text-zinc-400">Choice of 3 takos (flour or corn tortillas) served with ranch beans, seasoned rice, guacamole, salsa & sour cream.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">3 Enchiladas Dinner</h4>
+          <span class="text-amber-400 font-mono font-bold">$17</span>
+        </div>
+        <p class="text-xs text-zinc-400">Rolled corn tortillas with chicken, pork, or beef, smothered in red chile or Hatch green chile sauce and melted cheese.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Green Chile Posole</h4>
+          <span class="text-amber-400 font-mono font-bold">$12</span>
+        </div>
+        <p class="text-xs text-zinc-400">Traditional slow-cooked Southwestern hominy stew with tender pork shoulder, roasted Hatch green chiles, and cabbage.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Chile Relleno</h4>
+          <span class="text-amber-400 font-mono font-bold">$15</span>
+        </div>
+        <p class="text-xs text-zinc-400">Roasted poblano pepper stuffed with Monterrey jack cheese, lightly battered and fried, topped with ranchero sauce.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Steak Takos Platter</h4>
+          <span class="text-amber-400 font-mono font-bold">$20</span>
+        </div>
+        <p class="text-xs text-zinc-400">10 oz flat iron marinated in garlic-cilantro pesto, grilled to order and served with tortillas, salsa, ranch beans, and rice.</p>
+      </div>
+
+      <div class="bg-zinc-900/90 border border-zinc-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Chicken Tamales</h4>
+          <span class="text-amber-400 font-mono font-bold">$16</span>
+        </div>
+        <p class="text-xs text-zinc-400">3 steamed chicken tamales topped with red chile sauce & feta cheese, served with ranch beans and rice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KIDS MENU (From the Official Activity Sheet) -->
+  <section id="kids" class="py-16 bg-[#141417] border-y border-takoBorder px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-8">
+        <span class="text-xs uppercase tracking-widest text-amber-500 font-extrabold">Family Friendly Dining</span>
+        <h2 class="text-3xl font-black text-white mt-1">Tako Kids Menu (12 & Under)</h2>
+        <p class="text-zinc-400 text-sm mt-1">Served with your choice of Steamed Rice or Fries, plus Teriyaki, Sweet Thai Chili, or Ketchup.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-center">
+          <h4 class="font-black text-white text-base">Kids Quesadilla</h4>
+          <p class="text-xs text-zinc-400 mt-1">Cheese ($2.50) or add Chicken (+$1.00)</p>
+          <span class="text-amber-400 font-mono font-bold text-sm block mt-2">$2.50</span>
+        </div>
+
+        <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-center">
+          <h4 class="font-black text-white text-base">Baja Fish (5 pc)</h4>
+          <p class="text-xs text-zinc-400 mt-1">Crispy mild white fish with fries or rice</p>
+          <span class="text-amber-400 font-mono font-bold text-sm block mt-2">$6.00</span>
+        </div>
+
+        <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-center">
+          <h4 class="font-black text-white text-base">Shrimp Tempura (4 pc)</h4>
+          <p class="text-xs text-zinc-400 mt-1">Light tempura battered shrimp</p>
+          <span class="text-amber-400 font-mono font-bold text-sm block mt-2">$6.00</span>
+        </div>
+
+        <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-center">
+          <h4 class="font-black text-white text-base">Chicken Tenders (3 pc)</h4>
+          <p class="text-xs text-zinc-400 mt-1">Crisp hand-breaded tenders</p>
+          <span class="text-amber-400 font-mono font-bold text-sm block mt-2">$6.00</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSUMER ADVISORY & ALLERGIES (Direct from Menu Footers) -->
+  <footer class="bg-takoDark py-12 px-4 border-t border-takoBorder text-xs text-zinc-500">
+    <div class="max-w-5xl mx-auto space-y-4">
+      <div class="bg-zinc-950 border border-zinc-800 p-4 rounded-xl text-zinc-400 leading-relaxed">
+        <p class="font-bold text-amber-500 mb-1">⚠️ ALLERGY & RAW CONSUMPTION NOTICE:</p>
+        <p class="mb-2">
+          * Sushi & sashimi items are served raw or undercooked. Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions.
+        </p>
+        <p>
+          <strong>Allergies:</strong> Please notify your server if you have any food allergies. <em>Note: All spicy tuna and spicy salmon preparations contain sesame oil and sesame seeds.</em>
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between text-zinc-400 pt-4 border-t border-zinc-800 gap-4">
+        <p>© TakoSushi Spartanburg • 226 W Main St, Spartanburg, SC 29306</p>
+        <p>Neighbors with RJ Rockers Brewery & Streaking Birdies Golf Lounge</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tab Switcher Script -->
+  <script>
+    function setTab(tabName) {
+      // Hide all panels
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      
+      // Reset button styles
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-amber-600', 'bg-rose-600', 'text-white');
+        btn.classList.add('bg-zinc-800', 'text-zinc-300');
+      });
+
+      // Show selected panel
+      const activePanel = document.getElementById('panel-' + tabName);
+      if (activePanel) activePanel.classList.add('active');
+
+      // Highlight active button
+      const activeBtn = document.getElementById('btn-' + tabName);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-zinc-800', 'text-zinc-300');
+        activeBtn.classList.add('bg-amber-600', 'text-white');
+      }
+    }
+  </script>
+</body>
+</html>
